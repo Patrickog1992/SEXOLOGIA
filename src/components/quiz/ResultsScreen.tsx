@@ -9,7 +9,7 @@ type ResultsScreenProps = {
 };
 
 export default function ResultsScreen({ analysis, onNext }: ResultsScreenProps) {
-  const scorePosition = Math.max(0, Math.min(100, analysis.score));
+  const scorePosition = Math.max(0, Math.min(100, analysis.score || 30));
 
   return (
     <QuizLayout>
@@ -26,7 +26,7 @@ export default function ResultsScreen({ analysis, onNext }: ResultsScreenProps) 
 
           <div className="w-full py-4">
             <div className="relative w-full h-2 bg-muted rounded-full">
-              <div className="absolute top-0 left-0 h-2 bg-gradient-to-r from-muted to-primary rounded-full w-full"></div>
+              <div className="absolute top-0 left-0 h-2 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full w-full"></div>
             </div>
             <div className="flex justify-between text-xs text-foreground/70 mt-2 px-1">
               <span>0</span>
@@ -37,13 +37,13 @@ export default function ResultsScreen({ analysis, onNext }: ResultsScreenProps) 
             </div>
              <div className="relative w-full mt-2" style={{ left: `${scorePosition}%`, transform: 'translateX(-50%)' }}>
                 <div className="absolute flex flex-col items-center">
-                    <span className="text-sm font-bold text-primary">👉 VOCÊ</span>
+                    <span className="text-sm font-bold text-primary whitespace-nowrap">👉 VOCÊ ({analysis.score})</span>
                     <div className="w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-primary"></div>
                 </div>
             </div>
             <div className="flex justify-between text-sm font-bold text-foreground mt-12 pt-2">
-                <span className="w-1/2 text-center">COMUNS</span>
-                <span className="w-1/2 text-center">OS INESQUECIVEIS</span>
+                <span className="w-1/2 text-center text-red-500">COMUNS</span>
+                <span className="w-1/2 text-center text-green-500">OS INESQUECÍVEIS</span>
             </div>
           </div>
 
