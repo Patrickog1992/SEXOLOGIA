@@ -92,11 +92,11 @@ export default function OfferScreen() {
                 </p>
             </div>
 
-            <div className="bg-primary/10 p-4 rounded-lg border border-primary/30">
-                <p className="font-bold text-lg text-primary">Versão sem censura 🔥</p>
-                <p className="text-lg line-through text-foreground/70">De R$297 por apenas</p>
-                <p className="text-4xl font-bold text-primary">R$97</p>
-                <p className="text-lg text-foreground/90">ou 12x de R$9,70</p>
+            <div className="bg-primary/10 p-4 rounded-lg border-2 border-primary/50 shadow-lg">
+                <p className="text-2xl font-bold text-primary font-headline">AS CHAVES DO PRAZER</p>
+                <p className="text-lg text-foreground/70 mt-2">De <span className="line-through">R$297</span> por apenas</p>
+                <p className="text-5xl font-bold text-primary my-2">R$47</p>
+                <p className="text-base text-foreground/90">ou 12x de R$9,70</p>
             </div>
           
             <Button size="lg" className="w-full font-bold text-xl h-16 bg-green-600 hover:bg-green-700 text-white animate-pulse" onClick={() => console.log("Purchase clicked")}>
