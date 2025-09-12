@@ -17,7 +17,7 @@ const Testimonial = ({ text, author, imageUrl }: { text: string, author: string,
                     alt={`Depoimento de ${author}`} 
                     width={500}
                     height={100}
-                    className="rounded-lg shadow-md"
+                    className="rounded-lg shadow-md w-full h-auto"
                 />
             </div>
             <div className="flex justify-center text-primary">
