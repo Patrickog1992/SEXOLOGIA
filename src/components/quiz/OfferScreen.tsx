@@ -80,9 +80,15 @@ export default function OfferScreen() {
                 </div>
             </div>
 
-            <div className="pt-4 space-y-2">
+            <div className="pt-4 space-y-4">
                 <p className="text-lg sm:text-xl font-bold text-primary">
-                👉 Domine as técnicas mais sujas, aprenda a chupar como um demônio e meter como um deus.
+                Aprenda a deixá-la com as pernas trêmulas de prazer, gemendo e implorando por mais! Esse curso não é só técnicas: é o guia completo pra você se tornar o homem que ela não consegue esquecer nem dentro, nem fora da cama.
+                </p>
+                <p className="text-lg sm:text-xl font-bold text-primary">
+                Domine cada técnica, entenda a mente dela e veja tudo na prática com demonstrações explícitas e extremamente picantes 😏🔥
+                </p>
+                <p className="text-lg sm:text-xl font-bold text-primary">
+                Imagine ser o cara que a faz tremer de prazer, gemendo e implorando por mais 👅💦😎 Esse curso vai muito além de simples técnicas: é um guia completo para transformar você no homem confiante que ela não vai conseguir tirar da cabeça nem da cama
                 </p>
             </div>
 
