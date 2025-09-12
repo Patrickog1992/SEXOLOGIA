@@ -30,10 +30,8 @@ export default function TestimonialsScreen({ onNext }: TestimonialsScreenProps) 
             <h2 className="text-xl sm:text-2xl font-bold text-primary font-headline">
             +10.000 homens já saíram do “sexo meia-boca” e hoje transam tão gostoso que são lembrados por toda buceta que tocaram.
             </h2>
-            <p className="text-lg sm:text-xl text-foreground/90">
-            Veja o que eles falaram depois de usar as Chaves do Prazer 👀🔥
-            </p>
 
+            <p className="text-lg sm:text-xl font-bold text-primary">Veja o depoimento do Pedro Paulo</p>
             <div style={{position: 'relative', width: '100%', height: 0, paddingBottom: '177.78%'}}>
               <iframe src="https://www.youtube.com/embed/QadrzlO0H3k?rel=0&controls=1&modestbranding=1"
                 title="YouTube video player"
@@ -43,6 +41,10 @@ export default function TestimonialsScreen({ onNext }: TestimonialsScreenProps) 
                 style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}>
               </iframe>
             </div>
+
+            <p className="text-lg sm:text-xl text-foreground/90">
+            Veja o que eles falaram depois de usar as Chaves do Prazer 👀🔥
+            </p>
 
             <div className="space-y-4">
                 <Testimonial 
