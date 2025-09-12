@@ -53,7 +53,7 @@ const GrowingLine = ({ score }: { score: number }) => {
             COMUNS
           </span>
         </div>
-        <div className="absolute right-0 top-[15%]" style={{transform: "translate(50%, -100%)"}}>
+        <div className="absolute right-0 top-[15%]" style={{transform: "translate(0, -100%)"}}>
             <span className="text-sm font-bold text-green-500">OS OUTROS (100)</span>
         </div>
       </div>
@@ -80,7 +80,9 @@ const GrowingLine = ({ score }: { score: number }) => {
             <p className="text-lg sm:text-xl font-bold text-primary">VOCÊ ESTÁ ENTRE OS COMUNS MEIA BOMBA</p>
 
             <p className="text-lg sm:text-xl text-foreground/90">
-              {"Mas, irmão, nenhuma buceta quer só o básico."}
+              {analysis.profile !== "Mas, irmão, nenhuma buceta quer só o básico." 
+                ? analysis.profile 
+                : "Mas, irmão, nenhuma buceta quer só o básico."}
             </p>
   
             <div className="w-full py-4 space-y-2">
