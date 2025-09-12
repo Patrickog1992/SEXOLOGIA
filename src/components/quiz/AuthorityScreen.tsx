@@ -52,7 +52,7 @@ export default function AuthorityScreen({ onNext }: AuthorityScreenProps) {
               Explícito. Direto. Sem censura.
             </p>
             
-            <Button onClick={onNext} size="lg" className="w-full font-bold text-lg">
+            <Button onClick={onNext} size="lg" className="w-full font-bold text-lg whitespace-normal h-auto py-3">
                 👉 Clique abaixo e veja como entrar no universo das Chaves do Prazer.
             </Button>
         </CardContent>
