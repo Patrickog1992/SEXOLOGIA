@@ -146,9 +146,11 @@ export default function OfferScreen() {
             <p className="text-lg sm:text-xl text-foreground/90">
             Você acaba de desbloquear o acesso proibido às Chaves do Prazer o método que já fez milhares de homens se tornarem fodas inesquecíveis.
             </p>
-             <Button size="lg" className="w-full font-bold text-xl h-16 bg-green-600 hover:bg-green-700 text-white animate-pulse" onClick={() => console.log("Purchase clicked")}>
-                EU QUERO GARANTIR AGORA
-            </Button>
+             <a href="https://pay.kirvano.com/db75bf04-2a8c-44a8-bf1b-77a0689b41cc" target="_blank" rel="noopener noreferrer" className="w-full">
+                <Button size="lg" className="w-full font-bold text-xl h-16 bg-green-600 hover:bg-green-700 text-white animate-pulse">
+                    EU QUERO GARANTIR AGORA
+                </Button>
+            </a>
         </CardHeader>
         <CardContent className="space-y-6 text-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left items-start">
@@ -207,9 +209,11 @@ export default function OfferScreen() {
                 <p className="text-base text-foreground/90">ou 11x de R$5,17</p>
             </div>
           
-            <Button size="lg" className="w-full font-bold text-xl h-16 bg-green-600 hover:bg-green-700 text-white animate-pulse" onClick={() => console.log("Purchase clicked")}>
-                EU QUERO GARANTIR AGORA
-            </Button>
+            <a href="https://pay.kirvano.com/db75bf04-2a8c-44a8-bf1b-77a0689b41cc" target="_blank" rel="noopener noreferrer" className="w-full">
+                <Button size="lg" className="w-full font-bold text-xl h-16 bg-green-600 hover:bg-green-700 text-white animate-pulse">
+                    EU QUERO GARANTIR AGORA
+                </Button>
+            </a>
 
             <Separator className="my-4 bg-primary/20" />
 
@@ -266,5 +270,3 @@ export default function OfferScreen() {
     </QuizLayout>
   );
 }
-
-    
