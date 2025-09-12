@@ -10,7 +10,7 @@ export default function WelcomeScreen({ onStart }: WelcomeScreenProps) {
   return (
     <QuizLayout>
       <h1 className="text-3xl sm:text-4xl font-bold text-primary uppercase font-headline">
-        PROCURA-SE MACHOS DE VERDADE
+        PROCURA-SE HOMENS QUE ACHAM QUE SÃO BONS DE CAMA
       </h1>
       <p className="text-lg sm:text-xl text-foreground/90">
         Será que você realmente sabe foder uma mulher até ela gozar molhada,
