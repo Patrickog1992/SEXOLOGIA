@@ -46,7 +46,7 @@ export default function OfferScreen() {
                 🎉 Parabéns! 🎉
             </h3>
             <p className="text-lg sm:text-xl text-foreground/90">
-            Você acaba de desbloquear o acesso proibido às Chaves do Prazer – o método que já fez milhares de homens se tornarem fodas inesquecíveis.
+            Você acaba de desbloquear o acesso proibido às Chaves do Prazer o método que já fez milhares de homens se tornarem fodas inesquecíveis.
             </p>
             <p className="text-lg sm:text-xl font-bold text-primary">
             👉 Domine as técnicas mais sujas, aprenda a chupar como um demônio e meter como um deus.
