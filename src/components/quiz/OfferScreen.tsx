@@ -41,51 +41,52 @@ const Timer = () => {
 const testimonials = [
     {
       id: 1,
-      author: "J. Pires",
-      imageUrl: "https://i.imgur.com/cGzrRGs.jpg",
       text: "Minha mulher gozou 3 vezes na mesma noite. Três. Em 5 anos de casado isso nunca tinha acontecido. Salvou meu relacionamento.",
       likes: 132,
       hearts: 45,
     },
     {
       id: 2,
-      author: "Carlos M.",
-      imageUrl: "https://i.imgur.com/lUUhU1Y.jpg",
       text: "Pensei que sabia alguma coisa, mas depois disso aqui vi que eu era um amador. A mina que eu saio agora não para de falar da minha boca e da minha rola.",
       likes: 98,
       hearts: 23,
     },
     {
       id: 3,
-      author: "Ricardo S.",
-      imageUrl: "https://i.imgur.com/iGAged5.png",
       text: "É outro nível. As minas ficam me olhando diferente, pedindo pra repetir. Vicia mesmo, tanto elas quanto eu.",
       likes: 210,
       hearts: 88,
     },
      {
       id: 4,
-      author: "Fernanda O.",
-      imageUrl: "https://i.imgur.com/WYOZOHu.png",
       text: "Eu dei de presente pro meu marido e, nossa... que diferença! Parece que tenho um homem novo em casa, a cama tá pegando fogo!",
       likes: 189,
       hearts: 62,
-    }
+    },
+    {
+        id: 5,
+        text: "As técnicas são muito diretas e fáceis de aplicar. Na primeira vez que usei, a reação dela foi completamente diferente. Recomendo demais!",
+        likes: 154,
+        hearts: 51,
+      },
+      {
+        id: 6,
+        text: "Nunca me senti tão confiante na cama. O curso destravou um lado meu que eu não conhecia. As mulheres sentem essa energia.",
+        likes: 233,
+        hearts: 95,
+      },
+      {
+        id: 7,
+        text: "O módulo sobre sexo oral é uma obra de arte. Só com aquilo já valeu o investimento. A mina ficou louca.",
+        likes: 176,
+        hearts: 78,
+      },
   ];
 
 const FacebookTestimonial = ({testimonial}: {testimonial: typeof testimonials[0]}) => (
-    <div className="bg-zinc-800/50 p-4 rounded-lg border border-zinc-700">
-        <div className="flex items-center gap-3 mb-3">
-            <Image 
-                src={testimonial.imageUrl} 
-                alt={testimonial.author}
-                width={40}
-                height={40}
-                className="rounded-full object-cover"
-            />
-        </div>
+    <div className="bg-zinc-800/50 p-4 rounded-lg border border-zinc-700 h-full flex flex-col justify-between">
         <p className="text-zinc-300 text-sm mb-3">{testimonial.text}</p>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 mt-auto">
             <div className="flex items-center gap-1 text-zinc-400 text-xs">
                 <ThumbsUp className="w-4 h-4 text-blue-500 fill-current" />
                 <span>{testimonial.likes}</span>
@@ -101,7 +102,7 @@ const FacebookTestimonial = ({testimonial}: {testimonial: typeof testimonials[0]
 
 export default function OfferScreen() {
     const plugin = useRef(
-        Autoplay({ delay: 3000, stopOnInteraction: true })
+        Autoplay({ delay: 2500, stopOnInteraction: true })
       );
 
   return (
@@ -181,14 +182,14 @@ export default function OfferScreen() {
                 </h3>
                 <Carousel
                     plugins={[plugin.current]}
-                    className="w-full max-w-xs mx-auto"
+                    className="w-full max-w-sm mx-auto"
                     onMouseEnter={plugin.current.stop}
                     onMouseLeave={plugin.current.reset}
                 >
                     <CarouselContent>
                     {testimonials.map((testimonial) => (
-                        <CarouselItem key={testimonial.id}>
-                            <div className="p-1">
+                        <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3">
+                            <div className="p-1 h-full">
                                 <FacebookTestimonial testimonial={testimonial} />
                             </div>
                         </CarouselItem>
