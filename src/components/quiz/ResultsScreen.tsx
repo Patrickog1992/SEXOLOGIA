@@ -80,10 +80,7 @@ const GrowingLine = ({ score }: { score: number }) => {
             <p className="text-lg sm:text-xl font-bold text-primary">VOCÊ ESTÁ ENTRE OS COMUNS MEIA BOMBA</p>
 
             <p className="text-lg sm:text-xl text-foreground/90">
-              {analysis.category === "Indefinido" 
-                ? analysis.profile
-                : "Mas, irmão, nenhuma buceta quer só o básico."
-              }
+              {"Mas, irmão, nenhuma buceta quer só o básico."}
             </p>
   
             <div className="w-full py-4 space-y-2">
