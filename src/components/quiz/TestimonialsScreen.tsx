@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import QuizLayout from "@/components/quiz/QuizLayout";
 import { Card, CardContent } from "@/components/ui/card";
@@ -15,9 +17,9 @@ const Testimonial = ({ text, author, imageUrl }: { text: string, author: string,
                 <Image 
                     src={imageUrl} 
                     alt={`Depoimento de ${author}`} 
-                    width={500}
+                    width={100}
                     height={100}
-                    className="rounded-lg shadow-md w-full h-auto"
+                    className="rounded-full shadow-md object-cover"
                 />
             </div>
             <div className="flex justify-center text-primary">
