@@ -46,7 +46,7 @@ export default function OfferScreen() {
       <Card className="bg-card/80 border-primary/30 w-full">
         <CardHeader className="space-y-4">
             <h3 className="text-3xl sm:text-4xl font-bold text-primary font-headline">
-                Parabéns!
+                Parabéns
             </h3>
             <p className="text-lg sm:text-xl text-foreground/90">
             Você acaba de desbloquear o acesso proibido às Chaves do Prazer o método que já fez milhares de homens se tornarem fodas inesquecíveis.
@@ -82,10 +82,7 @@ export default function OfferScreen() {
 
             <div className="pt-4 space-y-2">
                 <p className="text-lg sm:text-xl font-bold text-primary">
-                Aprenda a deixá-la com as pernas trêmulas de prazer, gemendo e implorando por mais!
-                </p>
-                <p className="text-lg sm:text-xl text-foreground/90">
-                Esse curso não é só técnicas: é o guia completo pra você se tornar o homem que ela não consegue esquecer nem dentro, nem fora da cama.
+                👉 Domine as técnicas mais sujas, aprenda a chupar como um demônio e meter como um deus.
                 </p>
             </div>
 
@@ -96,8 +93,8 @@ export default function OfferScreen() {
                 <p className="text-lg text-foreground/90">ou 12x de R$9,70</p>
             </div>
           
-            <Button size="lg" className="w-full font-bold text-xl h-16" onClick={() => console.log("Purchase clicked")}>
-                Eu quero meter como um deus agora! 👅💦
+            <Button size="lg" className="w-full font-bold text-xl h-16 bg-green-600 hover:bg-green-700 text-white animate-pulse" onClick={() => console.log("Purchase clicked")}>
+                EU QUERO GARANTIR AGORA
             </Button>
         </CardContent>
         <Separator className="my-4 bg-primary/20" />
