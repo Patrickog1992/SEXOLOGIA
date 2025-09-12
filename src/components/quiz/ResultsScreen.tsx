@@ -69,7 +69,9 @@ const GrowingLine = ({ score }: { score: number }) => {
         <Card className="bg-card/80 border-primary/30">
           <CardHeader>
             <CardTitle className="text-2xl sm:text-3xl font-bold text-primary font-headline">
-              {analysis.category === "Comuns" ? "Você está no grupo: Comuns meia bomba" : `Você está no grupo: ${analysis.category}`}
+              {analysis.category === "Comuns"
+                ? "Você está no grupo: Comuns meia bomba"
+                : `Você está no grupo: ${analysis.category}`}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -97,4 +99,3 @@ const GrowingLine = ({ score }: { score: number }) => {
       </QuizLayout>
     );
   }
-  
