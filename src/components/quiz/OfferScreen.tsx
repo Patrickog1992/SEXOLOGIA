@@ -43,7 +43,7 @@ export default function OfferScreen() {
       <Card className="bg-card/80 border-primary/30 w-full">
         <CardHeader className="space-y-4">
             <h3 className="text-3xl sm:text-4xl font-bold text-primary font-headline">
-                🎉 Parabéns! 🎉
+                Parabéns!
             </h3>
             <p className="text-lg sm:text-xl text-foreground/90">
             Você acaba de desbloquear o acesso proibido às Chaves do Prazer o método que já fez milhares de homens se tornarem fodas inesquecíveis.
