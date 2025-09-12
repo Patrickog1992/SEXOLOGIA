@@ -8,30 +8,31 @@ type ResultsScreenProps = {
   onNext: () => void;
 };
 
-const Wave = ({ score }: { score: number }) => {
+const GrowingLine = ({ score }: { score: number }) => {
     const points = 100;
     const pathData = Array.from({ length: points }, (_, i) => {
       const x = (i / (points - 1)) * 100;
-      const y = 50 + 30 * Math.sin((i / points) * 2 * Math.PI - Math.PI / 2);
+      // Start low on the left (y=80), end high on the right (y=20)
+      const y = 80 - (i / (points - 1)) * 60;
       return `${x},${y}`;
     }).join(' ');
   
     const scoreX = score;
-    const scoreY = 50 + 30 * Math.sin((score / 100) * 2 * Math.PI - Math.PI / 2);
+    // Calculate Y position on the growing line for the score
+    const scoreY = 80 - (score / 100) * 60;
   
     return (
       <div className="relative w-full h-32">
         <svg viewBox="0 0 100 100" className="w-full h-full" preserveAspectRatio="none">
           <defs>
-            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="rgb(239 68 68)" />
-              <stop offset="50%" stopColor="rgb(234 179 8)" />
-              <stop offset="100%" stopColor="rgb(34 197 94)" />
+            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="hsl(var(--destructive))" />
+                <stop offset="100%" stopColor="rgb(34 197 94)" />
             </linearGradient>
           </defs>
           <polyline
             fill="none"
-            stroke="url(#waveGradient)"
+            stroke="url(#lineGradient)"
             strokeWidth="2"
             points={pathData}
           />
@@ -54,7 +55,8 @@ const Wave = ({ score }: { score: number }) => {
   };
   
   export default function ResultsScreen({ analysis, onNext }: ResultsScreenProps) {
-    const scorePosition = Math.max(0, Math.min(100, analysis.score || 0));
+    // The user wants the marker to be at 30.
+    const scorePosition = 30;
   
     return (
       <QuizLayout>
@@ -70,7 +72,7 @@ const Wave = ({ score }: { score: number }) => {
             </p>
   
             <div className="w-full py-4 space-y-2">
-                <Wave score={scorePosition} />
+                <GrowingLine score={scorePosition} />
                 <div className="flex justify-between text-sm font-bold text-foreground pt-2">
                     <span className="w-1/2 text-left text-red-500">COMUNS</span>
                     <span className="w-1/2 text-right text-green-500">OS INESQUECÍVEIS</span>
