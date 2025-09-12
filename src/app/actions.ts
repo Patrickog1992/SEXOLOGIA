@@ -24,7 +24,7 @@ export async function getAnalysis(answers: Record<string, string>) {
     console.error("Error analyzing sexual profile:", error);
     // Provide a fallback response in case of an error
     return {
-      profile: "Não foi possível analisar seu perfil. Tente novamente.",
+      profile: "Mas, irmão, nenhuma buceta quer só o básico.",
       score: 0,
       category: "Indefinido",
       description: "Ocorreu um erro durante a análise.",
