@@ -18,6 +18,9 @@ export default function QuizLayout({ children }: QuizLayoutProps) {
         />
         {children}
       </div>
+      <footer className="w-full max-w-xl text-center py-8 mt-8">
+          <p className="text-xs text-foreground/50">AS CHAVES DO PRAZER TODOS OS DIREITOS RESERVADOS</p>
+      </footer>
     </div>
   );
 }
