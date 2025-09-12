@@ -77,14 +77,14 @@ const GrowingLine = ({ score }: { score: number }) => {
             )}
           </CardHeader>
           <CardContent className="space-y-6">
+            <p className="text-lg sm:text-xl font-bold text-primary">VOCÊ ESTÁ ENTRE OS COMUNS MEIA BOMBA</p>
+
             <p className="text-lg sm:text-xl text-foreground/90">
               {analysis.category === "Indefinido" 
                 ? analysis.profile
                 : "Mas, irmão, nenhuma buceta quer só o básico."
               }
             </p>
-
-            <p className="text-lg sm:text-xl font-bold text-primary">VOCÊ ESTÁ ENTRE OS COMUNS MEIA BOMBA</p>
   
             <div className="w-full py-4 space-y-2">
                 <GrowingLine score={scorePosition} />
