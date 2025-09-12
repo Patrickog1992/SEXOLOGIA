@@ -68,15 +68,20 @@ const GrowingLine = ({ score }: { score: number }) => {
       <QuizLayout>
         <Card className="bg-card/80 border-primary/30">
           <CardHeader>
-            <CardTitle className="text-2xl sm:text-3xl font-bold text-primary font-headline">
-              {analysis.category === "Comuns"
-                ? "Você está no grupo: Comuns meia bomba"
-                : `Você está no grupo: ${analysis.category}`}
-            </CardTitle>
+            {analysis.category !== "Indefinido" && (
+                <CardTitle className="text-2xl sm:text-3xl font-bold text-primary font-headline">
+                {analysis.category === "Comuns"
+                    ? "Você está no grupo: Comuns meia bomba"
+                    : `Você está no grupo: ${analysis.category}`}
+                </CardTitle>
+            )}
           </CardHeader>
           <CardContent className="space-y-6">
             <p className="text-lg sm:text-xl text-foreground/90">
-              Mas, irmão, nenhuma buceta quer só o básico.
+              {analysis.category === "Indefinido" 
+                ? analysis.profile
+                : "Mas, irmão, nenhuma buceta quer só o básico."
+              }
             </p>
   
             <div className="w-full py-4 space-y-2">
