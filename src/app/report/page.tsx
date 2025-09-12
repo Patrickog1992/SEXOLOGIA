@@ -2,19 +2,19 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import InfoScreen from "@/components/quiz/InfoScreen";
+import ReportScreen from "@/components/quiz/ReportScreen";
 
-export default function InfoPage() {
+export default function ReportPage() {
   const router = useRouter();
 
   const handleNext = () => {
-    router.push("/report");
+    router.push("/quiz/1");
   };
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-black">
       <div className="w-full max-w-2xl mx-auto">
-        <InfoScreen onNext={handleNext} />
+        <ReportScreen onNext={handleNext} />
       </div>
     </main>
   );
