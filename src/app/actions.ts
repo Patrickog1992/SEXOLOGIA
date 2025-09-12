@@ -1,6 +1,7 @@
 "use server";
 
 import { analyzeSexualProfile, AnalyzeSexualProfileInput } from "@/ai/flows/analyze-sexual-profile";
+import { revalidatePath } from "next/cache";
 
 export async function getAnalysis(answers: Record<string, string>) {
   const input: AnalyzeSexualProfileInput = {
@@ -17,6 +18,7 @@ export async function getAnalysis(answers: Record<string, string>) {
 
   try {
     const result = await analyzeSexualProfile(input);
+    revalidatePath('/results');
     return result;
   } catch (error) {
     console.error("Error analyzing sexual profile:", error);
