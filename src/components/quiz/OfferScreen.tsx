@@ -160,7 +160,8 @@ export default function OfferScreen() {
                         alt="Mulher insatisfeita"
                         width={300}
                         height={200}
-                        className="rounded-lg mx-auto"
+                        className="rounded-lg mx-auto w-full h-auto"
+                        objectFit="contain"
                     />
                     <ul className="space-y-2">
                         <li className="flex items-start gap-2"><XCircle className="h-5 w-5 text-destructive mt-1 flex-shrink-0" /><span>“Mais uma noite sem sentir prazer de verdade…”</span></li>
@@ -171,12 +172,13 @@ export default function OfferScreen() {
                 {/* Depois */}
                 <div className="space-y-3">
                     <h4 className="font-bold text-lg text-green-500 text-center">A mulher que você pega DEPOIS das Chaves do Prazer</h4>
-                    <Image
+                     <Image
                         src="https://i.imgur.com/dn9wi1S.png"
                         alt="Mulher satisfeita"
                         width={300}
                         height={200}
-                        className="rounded-lg mx-auto"
+                        className="rounded-lg mx-auto w-full h-auto"
+                        objectFit="contain"
                     />
                      <ul className="space-y-2">
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" /><span>“Agora cada toque me enlouquece e me faz gozar sem parar!”</span></li>
@@ -201,7 +203,7 @@ export default function OfferScreen() {
             <div className="bg-primary/10 p-4 rounded-lg border-2 border-primary/50 shadow-lg">
                 <p className="text-2xl font-bold text-primary font-headline">AS CHAVES DO PRAZER</p>
                 <p className="text-lg text-foreground/70 mt-2">De <span className="line-through">R$297</span> por apenas</p>
-                <p className="text-5xl font-bold text-primary my-2">R$47</p>
+                <p className="text-5xl font-bold text-green-500 my-2">R$47</p>
                 <p className="text-base text-foreground/90">ou 11x de R$5,17</p>
             </div>
           
@@ -264,7 +266,5 @@ export default function OfferScreen() {
     </QuizLayout>
   );
 }
-
-    
 
     
