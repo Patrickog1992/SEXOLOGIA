@@ -2,14 +2,24 @@ import { Button } from "@/components/ui/button";
 import QuizLayout from "@/components/quiz/QuizLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 type TestimonialsScreenProps = {
   onNext: () => void;
 };
 
-const Testimonial = ({ text, author }: { text: string, author: string }) => (
+const Testimonial = ({ text, author, imageUrl }: { text: string, author: string, imageUrl: string }) => (
     <Card className="bg-card/80 border-primary/30">
         <CardContent className="pt-6 space-y-4">
+            <div className="flex justify-center">
+                <Image 
+                    src={imageUrl} 
+                    alt={`Depoimento de ${author}`} 
+                    width={500}
+                    height={100}
+                    className="rounded-lg shadow-md"
+                />
+            </div>
             <div className="flex justify-center text-primary">
                 <Star className="w-5 h-5 fill-current" />
                 <Star className="w-5 h-5 fill-current" />
@@ -49,15 +59,18 @@ export default function TestimonialsScreen({ onNext }: TestimonialsScreenProps) 
             <div className="space-y-4">
                 <Testimonial 
                     text="Pensei que sabia alguma coisa, mas depois disso aqui vi que eu era um amador. A mina que eu saio agora não para de falar da minha boca e da minha rola." 
-                    author="Carlos M." 
+                    author="Carlos M."
+                    imageUrl="https://i.imgur.com/lUUhU1Y.jpg"
                 />
                 <Testimonial 
                     text="Minha mulher gozou 3 vezes na mesma noite. Três. Em 5 anos de casado isso nunca tinha acontecido. Salvou meu relacionamento." 
-                    author="J. Pires" 
+                    author="J. Pires"
+                    imageUrl="https://i.imgur.com/cGzrRGs.jpg"
                 />
                 <Testimonial 
                     text="É outro nível. As minas ficam me olhando diferente, pedindo pra repetir. Vicia mesmo, tanto elas quanto eu." 
-                    author="Ricardo S." 
+                    author="Ricardo S."
+                    imageUrl="https://i.imgur.com/iGAged5.png"
                 />
             </div>
             
