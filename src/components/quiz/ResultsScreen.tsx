@@ -16,7 +16,7 @@ export default function ResultsScreen({ analysis, onNext }: ResultsScreenProps) 
       <Card className="bg-card/80 border-primary/30">
         <CardHeader>
           <CardTitle className="text-2xl sm:text-3xl font-bold text-primary font-headline">
-            {analysis.category === "Comuns" ? "Você caiu no grupo dos que “sabem o básico”…" : `Você está no grupo: ${analysis.category}`}
+            {analysis.category === "Comuns" ? "Você está no grupo: Comuns meia bomba" : `Você está no grupo: ${analysis.category}`}
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
@@ -37,13 +37,13 @@ export default function ResultsScreen({ analysis, onNext }: ResultsScreenProps) 
             </div>
              <div className="relative w-full mt-2" style={{ left: `${scorePosition}%`, transform: 'translateX(-50%)' }}>
                 <div className="absolute flex flex-col items-center">
-                    <span className="text-sm font-bold text-primary">👉 Você está aqui.</span>
+                    <span className="text-sm font-bold text-primary">👉 VOCÊ</span>
                     <div className="w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-primary"></div>
                 </div>
             </div>
             <div className="flex justify-between text-sm font-bold text-foreground mt-12 pt-2">
-                <span className="w-1/2 text-center">Comuns</span>
-                <span className="w-1/2 text-center">Os Machos Inesquecíveis</span>
+                <span className="w-1/2 text-center">COMUNS</span>
+                <span className="w-1/2 text-center">OS INESQUECIVEIS</span>
             </div>
           </div>
 
@@ -52,7 +52,7 @@ export default function ResultsScreen({ analysis, onNext }: ResultsScreenProps) 
           </p>
 
           <Button onClick={onNext} size="lg" className="w-full font-bold text-lg animate-pulse">
-            🔥 Clique aqui embaixo e desbloqueie as CHAVES DO PRAZER.
+            QUERO AS CHAVES DO PRAZER
           </Button>
         </CardContent>
       </Card>
