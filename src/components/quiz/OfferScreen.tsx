@@ -77,13 +77,12 @@ const FacebookTestimonial = ({testimonial}: {testimonial: typeof testimonials[0]
     <div className="bg-zinc-800/50 p-4 rounded-lg border border-zinc-700">
         <div className="flex items-center gap-3 mb-3">
             <Image 
-                src={testimonial.imageUrl}
+                src={testimonial.imageUrl} 
                 alt={testimonial.author}
                 width={40}
                 height={40}
                 className="rounded-full object-cover"
             />
-            <p className="font-bold text-white">{testimonial.author}</p>
         </div>
         <p className="text-zinc-300 text-sm mb-3">{testimonial.text}</p>
         <div className="flex items-center gap-4">
