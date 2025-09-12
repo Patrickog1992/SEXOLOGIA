@@ -34,6 +34,16 @@ export default function TestimonialsScreen({ onNext }: TestimonialsScreenProps) 
             Veja o que eles falaram depois de usar as Chaves do Prazer 👀🔥
             </p>
 
+            <div style={{position: 'relative', width: '100%', height: 0, paddingBottom: '177.78%'}}>
+              <iframe src="https://www.youtube.com/embed/QadrzlO0H3k?rel=0&controls=1&modestbranding=1"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}>
+              </iframe>
+            </div>
+
             <div className="space-y-4">
                 <Testimonial 
                     text="Pensei que sabia alguma coisa, mas depois disso aqui vi que eu era um amador. A mina que eu saio agora não para de falar da minha boca e da minha rola." 
