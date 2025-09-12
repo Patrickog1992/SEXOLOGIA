@@ -14,6 +14,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const Timer = () => {
     const [timeLeft, setTimeLeft] = useState(10 * 60); // 10 minutes in seconds
@@ -99,6 +100,29 @@ const FacebookTestimonial = ({testimonial}: {testimonial: typeof testimonials[0]
     </div>
 );
 
+const faqItems = [
+    {
+        question: "Como vou receber o acesso?",
+        answer: "O acesso é imediato após a confirmação do pagamento. Você receberá um e-mail com todas as instruções para acessar a área de membros. Verifique sua caixa de spam caso não encontre."
+    },
+    {
+        question: "Por quanto tempo tenho acesso?",
+        answer: "O acesso ao Chaves do Prazer é vitalício! Você pode assistir às aulas quantas vezes quiser, no seu ritmo, para sempre."
+    },
+    {
+        question: "É seguro comprar?",
+        answer: "Sim, 100% seguro. O pagamento é processado por uma das maiores plataformas de produtos digitais do mundo, utilizando criptografia de ponta para proteger seus dados."
+    },
+    {
+        question: "E se eu não gostar?",
+        answer: "Você tem uma garantia incondicional de 7 dias. Se por qualquer motivo não ficar satisfeito, basta pedir o reembolso e devolveremos todo o seu dinheiro, sem perguntas."
+    },
+    {
+        question: "As aulas são explícitas?",
+        answer: "Sim. Este não é um curso teórico. Mostramos tudo na prática, de forma explícita e sem censura, para que você aprenda de verdade como dar o máximo de prazer."
+    }
+]
+
 
 export default function OfferScreen() {
     const plugin = useRef(
@@ -122,6 +146,9 @@ export default function OfferScreen() {
             <p className="text-lg sm:text-xl text-foreground/90">
             Você acaba de desbloquear o acesso proibido às Chaves do Prazer o método que já fez milhares de homens se tornarem fodas inesquecíveis.
             </p>
+             <Button size="lg" className="w-full font-bold text-xl h-16 bg-green-600 hover:bg-green-700 text-white animate-pulse" onClick={() => console.log("Purchase clicked")}>
+                EU QUERO GARANTIR AGORA
+            </Button>
         </CardHeader>
         <CardContent className="space-y-6 text-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
@@ -216,6 +243,24 @@ export default function OfferScreen() {
             </p>
         </CardFooter>
       </Card>
+
+      <div className="w-full mt-8">
+            <h3 className="text-2xl sm:text-3xl font-bold text-primary font-headline mb-4">
+                Perguntas Frequentes
+            </h3>
+            <Accordion type="single" collapsible className="w-full text-left">
+                {faqItems.map((item, index) => (
+                    <AccordionItem key={index} value={`item-${index+1}`}>
+                        <AccordionTrigger className="font-semibold text-lg hover:no-underline">{item.question}</AccordionTrigger>
+                        <AccordionContent className="text-base text-foreground/80">
+                            {item.answer}
+                        </AccordionContent>
+                    </AccordionItem>
+                ))}
+            </Accordion>
+        </div>
     </QuizLayout>
   );
 }
+
+    
