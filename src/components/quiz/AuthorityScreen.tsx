@@ -38,6 +38,16 @@ export default function AuthorityScreen({ onNext }: AuthorityScreenProps) {
             <p className="text-base sm:text-lg text-foreground/90">
               Ela não fala de teoria, ela mostra na prática: posições, chupadas, técnicas de meter e até truques psicológicos pra viciar qualquer buceta.
             </p>
+            <div className="flex justify-center">
+                <Image
+                    src="https://i.imgur.com/7GQFATL.jpeg"
+                    alt="Exemplo prático de técnicas"
+                    data-ai-hint="sensual couple"
+                    width={400}
+                    height={250}
+                    className="rounded-lg shadow-lg"
+                />
+            </div>
             <p className="text-lg sm:text-xl font-bold text-primary">
               Explícito. Direto. Sem censura.
             </p>
