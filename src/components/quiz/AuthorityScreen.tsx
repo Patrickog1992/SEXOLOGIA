@@ -16,7 +16,7 @@ export default function AuthorityScreen({ onNext }: AuthorityScreenProps) {
       <Card className="bg-card/80 border-primary/30">
         <CardContent className="pt-6 space-y-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-primary font-headline">
-                🎓 Essa é a musa que vai abrir as Chaves do Prazer pra você.
+              Essa é a Ana Julia, a sexóloga que vai abrir as Chaves do Prazer para você
             </h2>
             
             {authorityImage && (
