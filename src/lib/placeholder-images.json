@@ -1,3 +1,10 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "authority-woman",
+      "description": "A portrait of a confident woman, the sexual educator.",
+      "imageUrl": "https://picsum.photos/seed/101/400/400",
+      "imageHint": "confident woman"
+    }
+  ]
 }
