@@ -45,10 +45,16 @@ const GrowingLine = ({ score }: { score: number }) => {
             transform: `translate(-50%, -100%)`
           }}
         >
-          <span className="text-sm font-bold text-primary whitespace-nowrap -mt-4">
+          <span className="text-sm font-bold text-primary whitespace-nowrap -mt-2">
             👉 VOCÊ ({score})
           </span>
           <div className="w-4 h-4 bg-primary rounded-full border-2 border-background shadow-md"></div>
+          <span className="text-xs font-bold text-red-500 whitespace-nowrap mt-1">
+            COMUNS
+          </span>
+        </div>
+        <div className="absolute right-0 top-[15%]" style={{transform: "translate(50%, -100%)"}}>
+            <span className="text-sm font-bold text-green-500">OS OUTROS (100)</span>
         </div>
       </div>
     );
