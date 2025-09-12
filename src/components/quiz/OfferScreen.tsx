@@ -1,13 +1,19 @@
 
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import QuizLayout from "@/components/quiz/QuizLayout";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { CheckCircle2, XCircle } from "lucide-react";
+import { CheckCircle2, XCircle, Heart, ThumbsUp } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Timer = () => {
     const [timeLeft, setTimeLeft] = useState(10 * 60); // 10 minutes in seconds
@@ -32,8 +38,73 @@ const Timer = () => {
     );
 };
 
+const testimonials = [
+    {
+      id: 1,
+      author: "J. Pires",
+      imageUrl: "https://i.imgur.com/cGzrRGs.jpg",
+      text: "Minha mulher gozou 3 vezes na mesma noite. Três. Em 5 anos de casado isso nunca tinha acontecido. Salvou meu relacionamento.",
+      likes: 132,
+      hearts: 45,
+    },
+    {
+      id: 2,
+      author: "Carlos M.",
+      imageUrl: "https://i.imgur.com/lUUhU1Y.jpg",
+      text: "Pensei que sabia alguma coisa, mas depois disso aqui vi que eu era um amador. A mina que eu saio agora não para de falar da minha boca e da minha rola.",
+      likes: 98,
+      hearts: 23,
+    },
+    {
+      id: 3,
+      author: "Ricardo S.",
+      imageUrl: "https://i.imgur.com/iGAged5.png",
+      text: "É outro nível. As minas ficam me olhando diferente, pedindo pra repetir. Vicia mesmo, tanto elas quanto eu.",
+      likes: 210,
+      hearts: 88,
+    },
+     {
+      id: 4,
+      author: "Fernanda O.",
+      imageUrl: "https://i.imgur.com/WYOZOHu.png",
+      text: "Eu dei de presente pro meu marido e, nossa... que diferença! Parece que tenho um homem novo em casa, a cama tá pegando fogo!",
+      likes: 189,
+      hearts: 62,
+    }
+  ];
+
+const FacebookTestimonial = ({testimonial}: {testimonial: typeof testimonials[0]}) => (
+    <div className="bg-zinc-800/50 p-4 rounded-lg border border-zinc-700">
+        <div className="flex items-center gap-3 mb-3">
+            <Image 
+                src={testimonial.imageUrl}
+                alt={testimonial.author}
+                width={40}
+                height={40}
+                className="rounded-full object-cover"
+            />
+            <p className="font-bold text-white">{testimonial.author}</p>
+        </div>
+        <p className="text-zinc-300 text-sm mb-3">{testimonial.text}</p>
+        <div className="flex items-center gap-4">
+            <div className="flex items-center gap-1 text-zinc-400 text-xs">
+                <ThumbsUp className="w-4 h-4 text-blue-500 fill-current" />
+                <span>{testimonial.likes}</span>
+            </div>
+            <div className="flex items-center gap-1 text-zinc-400 text-xs">
+                <Heart className="w-4 h-4 text-red-500 fill-current" />
+                <span>{testimonial.hearts}</span>
+            </div>
+        </div>
+    </div>
+);
+
 
 export default function OfferScreen() {
+    const plugin = useRef(
+        Autoplay({ delay: 3000, stopOnInteraction: true })
+      );
+
   return (
     <QuizLayout>
         <div className="w-full text-center p-2 sm:p-4 border-2 border-dashed border-primary rounded-lg bg-primary/10">
@@ -58,7 +129,7 @@ export default function OfferScreen() {
                 <div className="space-y-3">
                     <h4 className="font-bold text-lg text-destructive text-center">A mulher que você pega ANTES das Chaves do Prazer</h4>
                     <div className="flex justify-center">
-                        <Image src="https://i.imgur.com/d0efBEf.png" alt="Mulher insatisfeita" width={300} height={200} className="rounded-lg mx-auto object-cover" />
+                        <Image src="https://i.imgur.com/d0efBEf.png" alt="Mulher insatisfeita" width={300} height={200} className="rounded-lg mx-auto object-cover w-[300px] h-[200px]" />
                     </div>
                     <ul className="space-y-2">
                         <li className="flex items-start gap-2"><XCircle className="h-5 w-5 text-destructive mt-1 flex-shrink-0" /><span>“Mais uma noite sem sentir prazer de verdade…”</span></li>
@@ -70,7 +141,7 @@ export default function OfferScreen() {
                 <div className="space-y-3">
                     <h4 className="font-bold text-lg text-green-500 text-center">A mulher que você pega DEPOIS das Chaves do Prazer</h4>
                     <div className="flex justify-center">
-                        <Image src="https://i.imgur.com/dn9wi1S.png" alt="Mulher satisfeita" width={300} height={200} className="rounded-lg mx-auto object-cover" />
+                        <Image src="https://i.imgur.com/dn9wi1S.png" alt="Mulher satisfeita" width={300} height={200} className="rounded-lg mx-auto object-cover w-[300px] h-[200px]" />
                     </div>
                      <ul className="space-y-2">
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" /><span>“Agora cada toque me enlouquece e me faz gozar sem parar!”</span></li>
@@ -102,6 +173,31 @@ export default function OfferScreen() {
             <Button size="lg" className="w-full font-bold text-xl h-16 bg-green-600 hover:bg-green-700 text-white animate-pulse" onClick={() => console.log("Purchase clicked")}>
                 EU QUERO GARANTIR AGORA
             </Button>
+
+            <Separator className="my-4 bg-primary/20" />
+
+            <div className="space-y-4 text-center">
+                <h3 className="text-2xl font-bold text-primary font-headline">
+                    Veja o que falaram do curso
+                </h3>
+                <Carousel
+                    plugins={[plugin.current]}
+                    className="w-full max-w-xs mx-auto"
+                    onMouseEnter={plugin.current.stop}
+                    onMouseLeave={plugin.current.reset}
+                >
+                    <CarouselContent>
+                    {testimonials.map((testimonial) => (
+                        <CarouselItem key={testimonial.id}>
+                            <div className="p-1">
+                                <FacebookTestimonial testimonial={testimonial} />
+                            </div>
+                        </CarouselItem>
+                    ))}
+                    </CarouselContent>
+                </Carousel>
+            </div>
+
         </CardContent>
         <Separator className="my-4 bg-primary/20" />
         <CardFooter className="flex-col gap-4">
