@@ -57,7 +57,7 @@ export default function OfferScreen() {
                 {/* Antes */}
                 <div className="space-y-3">
                     <h4 className="font-bold text-lg text-destructive text-center">A mulher que você pega ANTES das Chaves do Prazer</h4>
-                    <Image src="https://i.imgur.com/d0efBEf.png" alt="Mulher insatisfeita" width={300} height={200} className="rounded-lg w-full" />
+                    <Image src="https://i.imgur.com/d0efBEf.png" alt="Mulher insatisfeita" width={300} height={200} className="rounded-lg mx-auto" />
                     <ul className="space-y-2">
                         <li className="flex items-start gap-2"><XCircle className="h-5 w-5 text-destructive mt-1 flex-shrink-0" /><span>“Mais uma noite sem sentir prazer de verdade…”</span></li>
                         <li className="flex items-start gap-2"><XCircle className="h-5 w-5 text-destructive mt-1 flex-shrink-0" /><span>“Ele nunca consegue me deixar molhada e implorando por mais…”</span></li>
@@ -67,7 +67,7 @@ export default function OfferScreen() {
                 {/* Depois */}
                 <div className="space-y-3">
                     <h4 className="font-bold text-lg text-green-500 text-center">A mulher que você pega DEPOIS das Chaves do Prazer</h4>
-                    <Image src="https://i.imgur.com/dn9wi1S.png" alt="Mulher satisfeita" width={300} height={200} className="rounded-lg w-full" />
+                    <Image src="https://i.imgur.com/dn9wi1S.png" alt="Mulher satisfeita" width={300} height={200} className="rounded-lg mx-auto" />
                      <ul className="space-y-2">
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" /><span>“Agora cada toque me enlouquece e me faz gozar sem parar!”</span></li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" /><span>“Ele aprendeu os segredos que me deixam implorar por mais toda vez…”</span></li>
