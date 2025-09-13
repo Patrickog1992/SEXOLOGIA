@@ -45,7 +45,7 @@ export default function TestimonialsScreen({ onNext }: TestimonialsScreenProps) 
 
             <p className="text-lg sm:text-xl font-bold text-primary">Veja o depoimento do Pedro Paulo</p>
             <div className="aspect-w-9 aspect-h-16 w-full">
-              <iframe src="https://www.youtube.com/embed/QadrzlO0H3k?rel=0&controls=1&modestbranding=1"
+              <iframe src="https://www.youtube.com/embed/Rqfz60xX4ms?rel=0&controls=1&modestbranding=1"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
