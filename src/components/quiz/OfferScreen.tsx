@@ -146,7 +146,7 @@ export default function OfferScreen() {
             <p className="text-lg sm:text-xl text-foreground/90">
             Você acaba de desbloquear o acesso proibido às Chaves do Prazer o método que já fez milhares de homens se tornarem fodas inesquecíveis.
             </p>
-             <a href="https://pay.kirvano.com/db75bf04-2a8c-44a8-bf1b-77a0689b41cc" target="_blank" rel="noopener noreferrer" className="w-full">
+             <a href="https://pay.kirvano.com/95975b2a-4137-4c23-94f3-4ec3a9f157a2" target="_blank" rel="noopener noreferrer" className="w-full">
                 <Button size="lg" className="w-full font-bold text-xl h-16 bg-green-600 hover:bg-green-700 text-white animate-pulse">
                     EU QUERO GARANTIR AGORA
                 </Button>
@@ -205,11 +205,11 @@ export default function OfferScreen() {
             <div className="bg-primary/10 p-4 rounded-lg border-2 border-primary/50 shadow-lg">
                 <p className="text-2xl font-bold text-primary font-headline">AS CHAVES DO PRAZER</p>
                 <p className="text-lg text-foreground/70 mt-2">De <span className="line-through">R$297</span> por apenas</p>
-                <p className="text-5xl font-bold text-green-500 my-2">R$47</p>
-                <p className="text-base text-foreground/90">ou 11x de R$5,17</p>
+                <p className="text-5xl font-bold text-green-500 my-2">R$27,00</p>
+                <p className="text-base text-foreground/90">ou 6x de R$5,11</p>
             </div>
           
-            <a href="https://pay.kirvano.com/db75bf04-2a8c-44a8-bf1b-77a0689b41cc" target="_blank" rel="noopener noreferrer" className="w-full">
+            <a href="https://pay.kirvano.com/95975b2a-4137-4c23-94f3-4ec3a9f157a2" target="_blank" rel="noopener noreferrer" className="w-full">
                 <Button size="lg" className="w-full font-bold text-xl h-16 bg-green-600 hover:bg-green-700 text-white animate-pulse">
                     EU QUERO GARANTIR AGORA
                 </Button>
@@ -270,3 +270,5 @@ export default function OfferScreen() {
     </QuizLayout>
   );
 }
+
+    
